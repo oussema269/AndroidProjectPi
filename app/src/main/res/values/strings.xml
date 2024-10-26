@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">UberProject</string>
+
+    <!-- Tableau pour les types d'utilisateurs -->
+    <string-array name="user_type_array">
+        <item>Client</item>
+        <item>Chauffeur</item>
+    </string-array>
+</resources>
