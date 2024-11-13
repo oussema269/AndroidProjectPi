@@ -1,9 +1,10 @@
-package com.example.uberproject.model;
+package com.example.uberproject.modelUser;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.Update;
 
 import java.util.List;
 
@@ -21,4 +22,10 @@ public interface UserDao {
     int deleteAll();
     @Query("SELECT * FROM user where email=:email")
     User getUserByEmail(String email);
+    @Query("DELETE FROM user where username=:username ")
+    void deleteUser(String username);
+    @Update
+    void updateUser(User user);
+
+
 }

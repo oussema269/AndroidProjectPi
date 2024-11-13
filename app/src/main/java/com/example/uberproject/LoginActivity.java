@@ -14,7 +14,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.example.uberproject.database.AppDataBase;
-import com.example.uberproject.model.User;
+import com.example.uberproject.modelUser.User;
 
 import java.util.ArrayList;
 import java.util.List;

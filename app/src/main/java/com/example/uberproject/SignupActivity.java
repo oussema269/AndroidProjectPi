@@ -11,7 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.uberproject.database.AppDataBase;
-import com.example.uberproject.model.User;
+import com.example.uberproject.modelUser.User;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +20,8 @@ public class SignupActivity extends AppCompatActivity {
     private AppDataBase appDataBase;
     List<User> users = new ArrayList<>();
     boolean check = false;
+    public static final int PICK_TEXT_FILE_REQUEST = 1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,9 +91,17 @@ public class SignupActivity extends AppCompatActivity {
                 Intent intent = new Intent(SignupActivity.this, LoginActivity.class);
                 startActivity(intent);
                 Toast.makeText(SignupActivity.this, "Inscription réussie", Toast.LENGTH_LONG).show();
+
+
             }
+
         });
     }
+
+
+
+
+
 
     int deleteAll() {
         return appDataBase.userDao().deleteAll();

@@ -1,4 +1,4 @@
-package com.example.uberproject.model;
+package com.example.uberproject.modelUser;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
@@ -16,34 +16,22 @@ public class User {
     private String password;
     @ColumnInfo(name = "role")
     private String role;
+    @ColumnInfo(typeAffinity = ColumnInfo.BLOB) // Champ pour l'image
+    private byte[] profileImage;
 
-    public User(String username, String email, String password, String role, int image) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.role = role;
-        this.image = image;
+    // Getters et setters
+    public byte[] getProfileImage() {
+        return profileImage;
     }
 
-    @ColumnInfo(name = "image")
-private int image;
+    public void setProfileImage(byte[] profileImage) {
+        this.profileImage = profileImage;
+    }
+
+
     public User() {
     }
 
-    public User(String username, String email, String password, String role) {
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.role = role;
-    }
-
-    public User(int idUser, String username, String email, String password, String role) {
-        this.idUser = idUser;
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.role = role;
-    }
 
     public int getIdUser() {
         return idUser;
@@ -84,10 +72,5 @@ private int image;
     public void setRole(String role) {
         this.role = role;
     }
-    public int getImage() {
-        return image;
-    }
-    public void setImage(int image) {
-        this.image = image;
-    }
+
 }

@@ -31,6 +31,10 @@ android {
 
 dependencies {
 
+        implementation 'com.sun.mail:android-mail:1.6.0'
+        implementation 'com.sun.mail:android-activation:1.6.0'
+    implementation 'com.stripe:stripe-android:21.0.1'
+
     implementation libs.appcompat
     implementation libs.material
     implementation libs.activity
